@@ -1,0 +1,40 @@
+Passo a passo de comando para colocar primeiro repositorio:
+
+1) Primeiro criar repositorio no GitHub onde vai da acesso a pagina com os comando do repositorio:
+
+2) Depois vai no editor de código e acessa o terminal.
+
+3) Coloque este código para acessar Github: git init 
+
+4) Consultar: git status
+
+5) Adicionar arquivo: git add  .
+
+6) Comitar (comentar) com: git commit -m "nome do commit"
+
+7) Estando em master coloque em main :   git branch -M main
+
+8) No site copia e cole: git remote add origin https://(o link do acesso ao repositorio)
+
+9) Para exportar ao GitHub: git push -u origin main
+
+10) Se você deseja remover arquivos que já foram adicionados ao controle de versão (rastreados) e que você deseja que sejam removidos do repositório, você pode usar: git rm nome_do_arquivo
+
+11) Se você deseja apenas remover arquivos do repositório, mas mantê-los no diretório de trabalho local, você pode usar: git rm --cached nome_do_arquivo
+
+12) Depois de usar git rm, você precisa confirmar essas alterações e enviar (commit) para o repositório. Isso é feito usando: git commit -m "Mensagem descrevendo as mudanças"
+git push
+
+13) Criar nova Branch (ramificação): git checkout -b nova_branch
+
+14) Enviar a nova branch para o repositório remoto: git push -u origin nova_branch
+
+15) Se você quiser criar uma nova branch com base em outra branch existente, você pode adicionar o nome da branch existente após o comando git checkout -b: git checkout -b nova_branch branch_existente
+
+16) [ERRO]  "fatal: refusing to merge unrelated histories" ocorre quando o Git encontra divergências entre o histórico do branch local e o histórico do branch remoto que não podem ser reconciliadas automaticamente. Isso geralmente acontece quando os dois branches têm históricos de commits independentes e não relacionados.
+
+Para resolver esse problema, você pode usar a opção --allow-unrelated-histories ao executar o comando git pull. Isso permitirá que você una os históricos independentes dos dois branches. Aqui está como você pode fazer isso:
+
+git pull origin main --allow-unrelated-histories
+
+
